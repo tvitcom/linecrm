@@ -81,6 +81,6 @@ if (isset($_POST['ready']) && ($_POST['ready'] === 'on')) {
 </form>
 <?php
 @$link = empty($keycont) ? ($keycont = $_POST['keycont']) : $keycont;
-echo "<p><a href=" . '"/listtalk.php?key=' . $link . '">К списку</a>';
+echo "<p><a href=" . '"./listtalk.php?key=' . $link . '">К списку</a>';
 include('./set_foot.php');
 

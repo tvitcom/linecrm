@@ -64,7 +64,7 @@ if (isset($_POST['editimprove']) && $_POST['editimprove'] =='true') {
     <tr><td>дата фикса:</td><td><input name="fixdate" id="fixdate" type="text" size="14" maxlenght="14" value="<?php echo empty($item['fixdate'])?date('Y-m-d'):$item['fixdate'];?>"></td></tr>
     <tr><td>Версия:</td><td><input name="rev" id="rev" type="text" size="10" maxlenght="10" value="<?php echo empty($item['rev'])?"":$item['rev'];?>"></td></tr>
     <tr><td></td><td><BUTTON name="editimprove" value="true" type="submit">Сохранить!</BUTTON></td></tr>
-    <tr><td><a href="/listimpr.php">К списку</a></td><td></td></tr>
+    <tr><td><a href="./listimpr.php">К списку</a></td><td></td></tr>
     </form>
 </table>
 <?php 

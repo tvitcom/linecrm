@@ -29,7 +29,7 @@ include('./set_head.php');
 <br><b><font color = "red">Line</font>CRM</b><br><hr>
 <h3>Страница входа на сайт</h3>
 
-<form method="POST" action="/loginproc.php">
+<form method="POST" action="./loginproc.php">
 <table>
 <tr><td>Пользователь</td><td>:</td><td><input type="text" name="login" size="20"></td></tr>
 <tr><td>Пароль</td><td>:</td><td><input type="password" name="pass" size="20"></td></tr>
@@ -37,6 +37,6 @@ include('./set_head.php');
 </table>
 </form>
 
-<p>Если вы хотите зарегистрироватся то нажмите <a href="/registration.php">тут</a></p>
+<p>Если вы хотите зарегистрироватся то нажмите <a href="./registration.php">тут</a></p>
 
 <?php include('./set_foot.php');

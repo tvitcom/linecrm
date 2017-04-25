@@ -23,18 +23,18 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('set_head.php');
-include('set_title.php');
-include('set_config.php');
-//header('Location:reconstruct.php');
+include('./set_head.php');
+include('./set_title.php');
+include('./set_config.php');
+//header('Location:./reconstruct.php');
 
 ?>
 <?php //------------Для какого контакта выводится история:------------------------------------------?>
 
 <p>
     Багтрек лист. Вы также можете: создать<a href="addimpr.php">новую</a> запись в "TO-DO"
-ознакомится с <a href = "/editfile.php">README</a>
- Запуск процесса <a href="/reconstruct.php">ETL</a>
+ознакомится с <a href = "./editfile.php">README</a>
+ Запуск процесса <a href="./reconstruct.php">ETL</a>
 </p>
 
 <?php //----------------Формируем сам запрос для вывода TO-DO:--------------------------------------
@@ -65,7 +65,7 @@ include('set_config.php');
 		
 		<tr>
 		<td>
-            <a href='/editimpr.php?id=<?php echo $impritem['id']?>'><?php echo $impritem['id'];?></a></td>
+            <a href='./editimpr.php?id=<?php echo $impritem['id']?>'><?php echo $impritem['id'];?></a></td>
 		<td>
 		<?php if (($impritem['fixdate'] < date('Y-m-d')) 
                 && ($impritem['fixdate']<>'0000-00-00')) { ?> 
@@ -108,7 +108,7 @@ include('set_config.php');
     </p>
 <?php } ?>
 <?php $res->free(); ?>
- <p><a href="settings.php">Назад</a></p>
+ <p><a href="./settings.php">Назад</a></p>
 
 <?php 
 //----------------Формируем сам запрос для вывода BUG:---------------------------------------------
@@ -137,7 +137,7 @@ $buglist_sql = "
 
             <tr bgcolor="yellow">
             <td>
-                <a href="/editimpr.php?id=<?php echo $bugitem['id']?>">
+                <a href="./editimpr.php?id=<?php echo $bugitem['id']?>">
                     <?php echo $bugitem['when']?>
                 </a>
             </td>
@@ -153,4 +153,4 @@ $buglist_sql = "
     <p><font color="red">Запрос не выполнен!!!</font></p>
 <?php } ?>
 
-<?php include('set_foot.php');
+<?php include('./set_foot.php');

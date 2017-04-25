@@ -66,7 +66,7 @@ echo '<p><font color="green">Данные успешно сохранены!</fo
                                                                              }
 
 ?>
- <form name="EditItem" action="/editcont.php" method="POST">
+ <form name="EditItem" action="./editcont.php" method="POST">
  <table border="0">
 	<tr><td></td><td><input name="key" type="hidden" value="<?php echo isset($_POST['key'])?$_POST['key']:$Item['id'];?>" ></input></td></tr>
 	<tr><td></td><td><input name="searchstring" type="hidden" value="<?php echo isset($_POST['serchstring'])?$_POST['searchstring']:'searchsword';?>" ></input></td></tr>
@@ -88,7 +88,7 @@ echo '<p><font color="green">Данные успешно сохранены!</fo
 	<tr><td>Категории:</td><td><input name="cat" type="text" id="cat" size="100" maxlenght="255" value="<?php echo isset($_POST['cat'])?$_POST['cat']:$Item['cat'];?>" ></input></td></tr>
 	 <?php if (!isset($_POST["deleterecord"])){ echo '<tr><td><BUTTON name="saverecord" value="TRUE" type="submit" autofocus>Подтвердить</BUTTON></td><td><BUTTON name="deleterecord" value=TRUE type="submit">Удалить запись!</BUTTON></td></tr>';} ?>
 	<tr><td></td><td></td></tr>
-	<tr><td><a href="/listcont.php">К списку</a></td><td><a href="/listtalk.php?key=<?php echo $Item['id']; ?>">История</a></td></tr>
+	<tr><td><a href="./listcont.php">К списку</a></td><td><a href="./listtalk.php?key=<?php echo $Item['id']; ?>">История</a></td></tr>
 </table>
    </form>
 <?php include('./set_foot.php');

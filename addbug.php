@@ -38,18 +38,18 @@ if (isset($_POST['addbug']) && $_POST['addbug'] == true) {
 	DATE('Y-m-d H:i:s'));//2
 $mysqli->query($addbug_sql);
 //echo "<p>sql: ".@$addbug_sql;
-echo '<p><h4><font color="green">Сообщение об ошибке направлено разработчикам. Благодарим за помощь!</font><a href="/listcont.php">Вернутся!</a></h4>';
+echo '<p><h4><font color="green">Сообщение об ошибке направлено разработчикам. Благодарим за помощь!</font><a href="./listcont.php">Вернутся!</a></h4>';
 }
 
 
 //----------- Выводим поля на страницу:-----------------
 ?>
 <table>
-    <form name="addbug" action="/addbug.php" method="POST">
+    <form name="addbug" action="./addbug.php" method="POST">
     <tr><td><font color="red">*Описание ошибки:</font></td><td><textarea name="todo" id="todo" type="textarea" size="100" maxlenght="2000" ><?php  echo empty($_POST['todo'])?"":$_POST['todo'];?></textarea></td></tr>
     <tr><td>Время отправки:</td><td><input name="when" type="text" size="19" maxlenght="19" disabled value="<?php  echo empty($_POST['when'])?DATE('Y-m-d H:i:s'):$_POST['when'];?>"></td></tr>
     <tr><td></td><td><BUTTON name="addbug" value="true" type="submit" <?php  echo empty($_POST['addbug'])?"":"disabled";?>>Создать!</BUTTON></td></tr>
-    <tr><td><a href="/listcont.php">К списку</a></td><td></td></tr>
+    <tr><td><a href="./listcont.php">К списку</a></td><td></td></tr>
     </form>
 </table>
 <?php 

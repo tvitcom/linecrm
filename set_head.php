@@ -30,7 +30,7 @@ session_start();
 <head>
     <title>Система управления взаимоотношениями: LineCRM</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link rel="shortcut icon" href="/pic/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="shortcut icon" href="./pic/favicon.ico">
 </head>
 <body>

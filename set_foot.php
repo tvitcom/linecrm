@@ -28,8 +28,8 @@
 <footer><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
 <img alt="Лицензия Creative Commons" style="border-width:0" src="/pic/80x15.png" /></a>
 <br />Произведение «<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">LineCRM</span>» созданное 
-<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">bpr</span>
+<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">tvitcom</span>
 , публикуется на условиях <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 3.0 Непортированная</a>.
-<br />Основано на произведении с сайта <a xmlns:dct="http://purl.org/dc/terms/" href="" rel="dct:source">LineCRM</a>.</footer>
+<br />Основано на произведении с сайта <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/tvitcom/linecrm" rel="dct:source">LineCRM</a>.</footer>
 </body>
 </html>

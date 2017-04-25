@@ -51,13 +51,13 @@ if (isset($_POST['addimprove']) && $_POST['addimprove'] == TRUE) {
 }
 ?>
 <table>
-    <form name="addimprove" action="/addimpr.php" method="POST">
+    <form name="addimprove" action="./addimpr.php" method="POST">
     <tr><td></td><td><input name="when" type="hidden" size="19" maxlenght="19" value="<?php echo DATE('Y-m-d H:i:s');?>"></td></tr>
     <tr><td>Планируемое:</td><td><textarea name="todo" id="todo" type="textarea" size="100" maxlenght="2000" ><?php echo empty($_POST['todo'])?"":$_POST['todo'];?></textarea></td></tr>
     <tr><td>на дату:</td><td><input name="fixdate" id="fixdate" type="text" size="14" maxlenght="14" value="<?php echo empty($_POST['fixdate'])?"":$_POST['fixdate'];?>"></td></tr>
     <tr><td>в версии:</td><td><input name="rev" id="rev" type="text" size="10" maxlenght="10" value="<?php echo empty($_POST['rev'])?"":$_POST['rev'];?>"></td></tr>
     <tr><td></td><td><BUTTON name="addimprove" value="true" type="submit">Создать!</BUTTON></td></tr>
-    <tr><td><a href="/settings.php">К списку</a></td><td></td></tr>
+    <tr><td><a href="./settings.php">К списку</a></td><td></td></tr>
     </form>
 </table>
 <?

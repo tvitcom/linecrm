@@ -23,18 +23,18 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('set_head.php');
+include('./set_head.php');
 //nclude('set_title.php');
 ?>
 <br><b><font color = "red">Line</font>CRM</b><br><hr>
 <h3>Страница временно отсутствует</h3>
 <p>РЕКОНСТРУКЦИЯ ДАННОЙ ЧАСТИ САЙТА</p>
-<p><a href="<?php  echo $_SERVER['HTTP_REFERER'];?>">Вернутся</a>
+<p><a href="./">Вернутся</a>
 <?php 
 //echo '<table>'.$_SERVER['REMOTE_USER'].'</table>';
 //echo '<table>'.$_SERVER['REMOTE_ADDR']."</table>";
 //echo "<table>".$_SERVER['HTTP_USER_AGENT'].'</table>';
 //echo "<table>".$_SERVER['HTTP_HOST'].'</table>';
 //echo "<table>".$_SERVER['HTTP_REFERER'].'</table>';
-include('set_foot.php');
+include('./set_foot.php');
 ?>

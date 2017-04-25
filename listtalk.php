@@ -23,10 +23,10 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('set_head.php');
-include('set_title.php');
-include('set_config.php');
-//header('Location:reconstruct.php');
+include('./set_head.php');
+include('./set_title.php');
+include('./set_config.php');
+//header('Location:./reconstruct.php');
 
 $yearnow = getdate();
 $filter_year = isset($_COOKIE['year'])?$_COOKIE['year']:$yearnow['year'];
@@ -41,12 +41,12 @@ else {
 	$realkeycont = 0;
 }
 $_SESSION['keycont'] = $realkeycont;
-echo '<p><a href="listcont.php">Назад</a> История общения с контактом: ';
+echo '<p><a href="./listcont.php">Назад</a> История общения с контактом: ';
 $whois_sql = sprintf('SELECT fio, whois FROM cont WHERE id=%1$u', intval($realkeycont));
 $rowfio = $mysqli->query($whois_sql);
 $rec = $rowfio->fetch_array();
 $t = ($rec[1])?$rec[1]:$rec[0];
-echo '<a href="/editcont.php?key='.$realkeycont.'">'.$t.'</a>';
+echo '<a href="./editcont.php?key='.$realkeycont.'">'.$t.'</a>';
 $rowfio->free();
  //echo 'SQL: '.whois_sql;
  //echo 'realkeycont = '.$realkeycont;
@@ -56,7 +56,7 @@ $rowfio->free();
 if (isset($_REQUEST['key']) && $realkeycont > 0) {
 
 	?>
-	Вы также можете <a href="addtalk.php?key=<?php echo intval($realkeycont); ?>">добавить</a>новую запись.</p>
+	Вы также можете <a href="./addtalk.php?key=<?php echo intval($realkeycont); ?>">добавить</a>новую запись.</p>
 	<?php
 
 }
@@ -75,7 +75,7 @@ $search_sql_talks=$mysqli->query($talks_sql);
 ?>
 <!-- Выводим строки -->
 
-<form name="Searchyeartalk" action="listtalk.php" method="POST">
+<form name="Searchyeartalk" action="./listtalk.php" method="POST">
 	 <table>
 		<td><input name="key" type="hidden" value="<?php  echo $realkeycont; ?>"></td>
 		<td><input name="searchyear" type="text" maxlenght="4" value="<?php  echo 'Все';/*$yearsearch;*/ ?>"></td>
@@ -87,7 +87,7 @@ $search_sql_talks=$mysqli->query($talks_sql);
 if ($search_sql_talks->num_rows) {		echo '<table><th>Дата:</th><th>Событие:</th><th>Приход:</th><th>Статус:</th>';
 	while ($row = $search_sql_talks->fetch_array(MYSQLI_ASSOC))	{
 	
-	   	echo "<tr><td>".'<a href="edittalk.php?id='.$row['id'].'">'.$row['dateconn'].'</a></td>';//дата и ссылка из неё
+	   	echo "<tr><td>".'<a href="./edittalk.php?id='.$row['id'].'">'.$row['dateconn'].'</a></td>';//дата и ссылка из неё
 	   	echo "<td>".$row['talk']."</td>";//разговор
 	   
 	   if (empty($row['coin'])) echo "<td></td>";  else  echo "<td>".$row['coin']." грн.</td>";

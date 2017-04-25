@@ -28,10 +28,10 @@ session_unset();
 session_destroy();
 setcookie('searchword', '', time() - 1);
 setcookie('keytalk', '', time() - 1);
-include('set_head.php');
+include('./set_head.php');
 
 ?>
 <br><b><font color = "red">Line</font>CRM</b><br><hr>
 <h3>Вы не авторизованы!</h3>
-<p>Нажмите <a href="index.php">ссылку</a> если хотите войти на сайт.</p>
-<?php include('set_foot.php'); ?>
+<p>Нажмите <a href="./index.php">ссылку</a> если хотите войти на сайт.</p>
+<?php include('./set_foot.php'); ?>

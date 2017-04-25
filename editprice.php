@@ -72,7 +72,7 @@ if (isset($_POST['deleteprice']) && $_POST['deleteprice'] == 'true') {
 //Тут происходит вывод данных на страницу:
 ?>
 <h4>Страница редактирования прайса:<h4><p><font color = "orange">Для услуг графа "Состояние" не заполняется!</font>
-<table><form action="/editprice.php" method="post">
+<table><form action="./editprice.php" method="post">
 <tr><td></td><td><input name="id" type="hidden" id="id" value="<?php echo isset($_POST['id'])?$_POST['id']:$realkey;?>" ></input></td></tr>
 <tr><td>Вид</td><td><input name="name" type="text" id="name" size="16" maxlenght="16" value="<?php echo isset($_POST['name'])?$_POST['name']:$Item['name'];?>" ></input></td></tr>
 <tr><td>Описание</td><td><input name="descript" type="descript" id="addrw" size="99" maxlenght="99" value="<?php echo isset($_POST['descript'])?$_POST['descript']:$Item['descript'];?>" ></input></td></tr>
@@ -82,7 +82,7 @@ if (isset($_POST['deleteprice']) && $_POST['deleteprice'] == 'true') {
 <tr><td>Цена</td><td><input name="cost" type="text" id="cost" size="7" maxlenght="7" value="<?php echo isset($_POST['cost'])?$_POST['cost']:$Item['cost'];?>" ></input></td></tr>
 <tr><td>Условия</td><td><input name="terms" type="text" id="terms" size="30" maxlenght="30" value="<?php echo isset($_POST['terms'])?$_POST['terms']:$Item['terms'];?>" ></input></td></tr>
 <?php if (!isset($_POST['deleteprice'])) {
-   echo '<tr><td><BUTTON name="saveprice" value="true" id="editprice" action="/editprice.php" autofocus>Сохранить!</BUTTON></td><td><BUTTON name="deleteprice" value="true" id="deleteprice" action="editprice.php">Удалить!</BUTTON></td></tr></form></table><p><a href="/pricelist.php?key='.$realkey;
+   echo '<tr><td><BUTTON name="saveprice" value="true" id="editprice" action="./editprice.php" autofocus>Сохранить!</BUTTON></td><td><BUTTON name="deleteprice" value="true" id="deleteprice" action="editprice.php">Удалить!</BUTTON></td></tr></form></table><p><a href="./pricelist.php?key='.$realkey;
    echo '">К списку</a></p>';
 }
 include('./set_foot.php');

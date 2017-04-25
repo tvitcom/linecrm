@@ -26,7 +26,7 @@
 if (empty($_SESSION['username'])) {
     header('Location:./logout.php');
 } else {
-    echo '<p align="center"> | <a href="/listcont.php">Контакты</a> | <a href="/listtask.php">Дела</a> | <a href="/pricelist.php?price=service">Услуги</a> | <a href="/pricelist.php?price=goods">Товары</a> | <a href="/reports.php">Отчёты</a> | <a href="/settings.php">Настройки</a> |  <a href="/addbug.php">Bug</a> | <a href="/logout.php">Выход</a> | </p>';
+    echo '<p align="center"> | <a href="./listcont.php">Контакты</a> | <a href="./listtask.php">Дела</a> | <a href="./pricelist.php?price=service">Услуги</a> | <a href="./pricelist.php?price=goods">Товары</a> | <a href="./reports.php">Отчёты</a> | <a href="./settings.php">Настройки</a> |  <a href="./addbug.php">Bug</a> | <a href="./logout.php">Выход</a> | </p>';
 }
 
 ?>

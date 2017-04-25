@@ -45,9 +45,9 @@ $search_sql_union=$search_sql1." union ".$search_sql2." union ".$search_sql3." u
 $search_sql_complete=$mysqli->query($search_sql_union);
 ?>
 
-<form name="Searchcont" action="listcont.php" method="POST">
+<form name="Searchcont" action="./listcont.php" method="POST">
 <p><input name="searchstring" type="search" placeholder="Введите текст для поиска" size="25" style="color:grey" autofocus>
-<BUTTON name="search" value="true" type="text">Поиск!</BUTTON>  Вы также можете <a href="/addcont.php">добавить</a> новый контакт.
+<BUTTON name="search" value="true" type="text">Поиск!</BUTTON>  Вы также можете <a href="./addcont.php">добавить</a> новый контакт.
 </form>
 <?php  echo '<table>';
 while ($row = $search_sql_complete->fetch_array(MYSQLI_NUM))	{

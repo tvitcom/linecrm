@@ -23,9 +23,9 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('head.inc');
-include('title.inc');
-header('Location:reconstruct.php');
+include('./head.inc');
+include('./title.inc');
+header('Location:./reconstruct.php');
 
-include('foot.inc');
+include('./foot.inc');
 ?>

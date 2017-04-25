@@ -58,7 +58,7 @@ include('./set_title.php');
 <?php
 
 ?>
-<form name="CreateItem" action="/addcont.php" method="POST">
+<form name="CreateItem" action="./addcont.php" method="POST">
     <table border="0">
         <tr><td>ФИО:</td><td><input name="fio" type="text" id="fio" size="50" maxlenght="62" value="<?php echo isset($_POST['fio']) ? $_POST['fio'] : ''; ?>" ></input></td></tr>
         <tr><td>Приметка:</td><td><input name="whois" type="text" id="whois" size="50" maxlenght="80" value="<?php echo isset($_POST['whois']) ? $_POST['whois'] : ''; ?>" ></input></td></tr>
@@ -79,5 +79,5 @@ include('./set_title.php');
         <tr><td></td><td><BUTTON name="addrecord" value="true" type="submit" autofocus >Создать!</BUTTON></td></tr>
     </table>
 </form>
-<p><a href="/listcont.php">К списку</a></p>
+<p><a href="./listcont.php">К списку</a></p>
 <?php include('./set_foot.php'); 

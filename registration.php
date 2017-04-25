@@ -28,19 +28,19 @@
 <head>
 <title>Система управления взаимоотношениями: LineCRM</title>
  <meta http-equiv="content-type" content="text/html;charset=utf-8">
- <link rel="stylesheet" type="text/css" href="/style.css">
+ <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 <?php 
 //include('./set_title.php');
 //include('./set_config.php');
-//header('Location:reconstruct.php');
-SESSION_START();//if (!isset($_SESSION['username'])): header('Location: logout.php');endif;
+//header('Location:./reconstruct.php');
+SESSION_START();//if (!isset($_SESSION['username'])): header('Location: ./logout.php');endif;
 ?>
 <br><b>TEST <font color="red">Line</font>CRM</b><br><hr>
 <h3>Страница регистрации в LineCRM</h3>
 <p><font color="green" >Красным выделяются поля в которых есть ошибки в написании!</font></p>
-<form method="POST" action="/reconstruct.php" enctype="multipart/form-data">
+<form method="POST" action="./reconstruct.php" enctype="multipart/form-data">
 <table>
 <tr><td colspan="2"><h4><font color="orange">Представьтесь</font></h4></td><td>
 <tr valign="center"><td>Имя (Отчество):</td><td><input type="text" name="name" size="30" autofocus required></td></tr>
@@ -65,5 +65,5 @@ SESSION_START();//if (!isset($_SESSION['username'])): header('Location: logout.p
 </form>
 <p><a href='./index.php'>Назад</a>
 <?php 
-include('set_foot.php');
+include('./set_foot.php');
 ?>

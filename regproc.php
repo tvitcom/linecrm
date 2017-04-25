@@ -24,7 +24,7 @@
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
 include('./set_config.php');
-header('Location:reconstruct.php');
+header('Location:./reconstruct.php');
 
 /*Если послан POST то:
 0)Чистим присланные данные
@@ -58,13 +58,13 @@ if ( count($_POST)) {
 	if (IsValidRegInfo($_POST)) { //проверка что присланные данные годны для работы сайта
 		if ( mail($umail, $utheme, $utext)) {
 			SetMailRequest($_POST); //В функции происходит установка значений в бд по зарегистрированному пользователю
-			$str = "/regbanner.php?n=" . $_POST['name'] . "&m=" . $_POST['mail']; 
-			Header("Location:$Str"); //Выход из скрипта и перенаправление на страницу баннер.
+			$str = "./regbanner.php?n=" . $_POST['name'] . "&m=" . $_POST['mail']; 
+			Header("Location:./$Str"); //Выход из скрипта и перенаправление на страницу баннер.
 		}
 
 	}
 	else { //Описываем что произойдет если присланные данные не годны к работе.
 		$str = "registartion.php?err=".$errUserfields;
-		Header("Location:$Str");
+		Header("Location:./$Str");
 	}
 }

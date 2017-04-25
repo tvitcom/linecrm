@@ -23,14 +23,14 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('set_head.php');
-include('set_config.php');
-include('set_title.php');
-//header('Location:reconstruct.php');
+include('./set_head.php');
+include('./set_config.php');
+include('./set_title.php');
+//header('Location:./reconstruct.php');
 ?>
-<form name="criteria" action="listcont.php" method="POST"><p>
+<form name="criteria" action="./listcont.php" method="POST"><p>
 <input name="group" type="text" maxlenght="16" autofocus value="">
-<BUTTON name="search" value="true" type="text">Выбрать</BUTTON> Вы также можете <a href="addprice.php">добавить</a> новую позицию прайса</p>
+<BUTTON name="search" value="true" type="text">Выбрать</BUTTON> Вы также можете <a href="./addprice.php">добавить</a> новую позицию прайса</p>
 </form>
 <?php 
 //Задаем критерии для вывода именно услуг:
@@ -42,8 +42,8 @@ $price_sql='SELECT `id`,`name`,`descript`,`state`,`delivery`,`warranty`,`cost`,`
 if ($price=$mysqli->query($price_sql))
 {
 	while ($row = $price->fetch_array(MYSQLI_NUM)) {	
-		echo '<table><tr><td><a href="inventories.php?key='.$row[0].'">#</a></td><td>';
-		echo '<a href="editprice.php?key='.$row[0].'">'.(($row[2]==='')?'Noname':$row[1]).'</a> ';
+		echo '<table><tr><td><a href="./inventories.php?key='.$row[0].'">#</a></td><td>';
+		echo '<a href="./editprice.php?key='.$row[0].'">'.(($row[2]==='')?'Noname':$row[1]).'</a> ';
 		echo $row[2].' ';
 		echo ($row[3]=='')?'':$row[3]." ";
 		echo ($row[4]=='')?'':$row[4]." ";

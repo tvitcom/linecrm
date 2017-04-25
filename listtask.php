@@ -23,9 +23,9 @@
  * @copyright  2012 tvitcom
  * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
  */
-include('set_head.php');
-include('set_title.php');
-include('set_config.php');
+include('./set_head.php');
+include('./set_title.php');
+include('./set_config.php');
 //header('Location:reconstruct.php');
 
 echo '<p><h4>Все незакрытые дела на сегодняшний день:</h4>';
@@ -43,7 +43,7 @@ $search_sql_tasks = $mysqli->query($tasks_sql);
 
 echo '<table>';
 while ($row = $search_sql_tasks->fetch_array(MYSQLI_NUM)) {
-    echo "<tr><td>" . '<a href="listtalk.php?key=' . $row[8] . '">' . $row[1] . '</a></td>';//дата и ссылка из неё
+    echo "<tr><td>" . '<a href="./listtalk.php?key=' . $row[8] . '">' . $row[1] . '</a></td>';//дата и ссылка из неё
     echo "<td>" . $row[2] . "</td>";//фио контакта
     echo "<td>" . $row[3] . "</td>";//задача
     echo "<td>готово:" . $row[6] . "</td></tr>";
@@ -53,4 +53,4 @@ $search_sql_tasks->free();
 
 ?>
 </form>
-<?php include('set_foot.php'); ?>
+<?php include('./set_foot.php'); ?>

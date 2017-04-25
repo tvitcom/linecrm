@@ -47,7 +47,7 @@ if (isset($_POST["addprice"]) && $_POST["addprice"]== TRUE && strlen($_POST['des
 		echo "<p>Запрос: ".$create_price_sql;
 } else {
 ?>
-<form name="createprice" action="/addprice.php" method="POST">
+<form name="createprice" action="./addprice.php" method="POST">
 <table>
 <tr><td></td><td>
 <tr><td>Продукт:</td><td><input name="name" type="text" id="name" size="16" maxlenght="16" value="<?php echo isset($_POST['name'])?$_POST['name']:"";?>" ></input></td></tr>
@@ -60,7 +60,7 @@ if (isset($_POST["addprice"]) && $_POST["addprice"]== TRUE && strlen($_POST['des
 <tr><td></td><td><BUTTON name="addprice" value="true" type="submit" autofocus >Создать!</BUTTON></td></tr>
 </table>
    </form>
- <a href="/pricelist.php">К списку</a>
+ <a href="./pricelist.php">К списку</a>
 <?php
 }
 include('./set_foot.php');

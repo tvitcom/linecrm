@@ -94,14 +94,14 @@ $whois_sql = sprintf('SELECT fio, whois FROM cont WHERE id=%1$u', intval(isset($
 if ($rowfio = $mysqli->query($whois_sql)) {
     $rec = $rowfio->fetch_array();
     $t = ($rec[1]) ? $rec[1] : $rec[0];
-    echo '<a href="/editcont.php?key=' . (isset($_POST['keycont']) ? $_POST['keycont'] : @$itemtalk['keycont']) . '">' . $t . '</a>';
+    echo '<a href="./editcont.php?key=' . (isset($_POST['keycont']) ? $_POST['keycont'] : @$itemtalk['keycont']) . '">' . $t . '</a>';
     $rowfio->free();
 } else {
     echo "Error!";
 }
 
 ?>
-<form name="edittalkid" action="/edittalk.php" method="POST">
+<form name="edittalkid" action="./edittalk.php" method="POST">
     <table border="0">
         <tr><td></td><td><input name="id" type="hidden" value="<?php echo isset($_POST['id']) ? $_POST['id'] : $itemtalk['id']; ?>" ></input></td></tr>
         <tr><td></td><td><input name="keycont" type="hidden" value="<?php echo isset($_POST['keycont']) ? $_POST['keycont'] : $itemtalk['keycont']; ?>" ></input></td></tr>
@@ -113,7 +113,7 @@ if ($rowfio = $mysqli->query($whois_sql)) {
         <tr><td>Приход:</td><td><input name="coin" type="text" id="coin" maxlenght="8" value="<?php echo isset($_POST['coin']) ? $_POST['coin'] : $itemtalk['coin']; ?>"></input></td></tr>
                 <?php if (!isset($_POST["deletetalk"])) echo '<tr><td><BUTTON name="savetalk" value="true" type="submit" autofocus >Подтвердить</BUTTON></td><td><BUTTON name="deletetalk" value="true" type="submit">Удалить запись!</BUTTON></td></tr>'; ?>
         <tr><td></td><td></td></tr>
-        <tr><td><a href="/listtalk.php?key=<?php echo $itemtalk['keycont']; ?>">К списку истории</a></td><td></a></td></tr>
+        <tr><td><a href="./listtalk.php?key=<?php echo $itemtalk['keycont']; ?>">К списку истории</a></td><td></a></td></tr>
     </table>
 </form>
 <?php

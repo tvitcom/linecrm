@@ -27,7 +27,7 @@
 include('./set_head.php');
 include('./set_title.php');
 include('./set_config.php');
-//header('Location:reconstruct.php');
+//header('Location:./reconstruct.php');
 header('Location:./listimpr.php');
 
 //----------проверка начальныхм параметров: --------------------------
@@ -36,11 +36,11 @@ $isdeveloper = "true";
 
 //-----Вывод информации на страницу" ------------------------
 
-echo '<p>Текущий <a href="listimpr.php">"TO-DO"</a>';
+echo '<p>Текущий <a href="./listimpr.php">"TO-DO"</a>';
 
 if ( $isdeveloper == "true" ) {
-	echo '  Также вы можете <a href="addimpr.php">добавить "TO-DO" релиза MyCRM</a></p>';
+	echo '  Также вы можете <a href="./addimpr.php">добавить "TO-DO" релиза MyCRM</a></p>';
 }
 
-include('set_foot.php');
+include('./set_foot.php');
 

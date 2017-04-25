@@ -23,10 +23,10 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
-include('set_head.php');
-include('set_title.php');
-include('set_config.php');
-//header('Location:reconstruct.php');
+include('./set_head.php');
+include('./set_title.php');
+include('./set_config.php');
+//header('Location:./reconstruct.php');
 
 //------------Для какого контакта выводится история:------------------------------------------
 
@@ -71,6 +71,6 @@ if ( $res = $mysqli->query($improvelist_sql)) {
 
 } else { echo '<p><font color="red">Запрос не выполнен!!!</font></p>';}
 
-echo '<p><a href="settings.php">Назад</a></p>';
-include('set_foot.php');
+echo '<p><a href="./settings.php">Назад</a></p>';
+include('./set_foot.php');
 ?>

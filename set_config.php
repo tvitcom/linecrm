@@ -24,14 +24,14 @@
  * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
  */
 $host = 'localhost';
-$db = 'linecrm';
-$user = 'linecrm';
+$db = 'linecrm-old';
+$user = 'linecrm-old';
 $pass = 'pass_to_linecrm';
 
 $mysqli = new mysqli($host, $user, $pass, $db);
 if (mysqli_connect_errno()) {
     echo "<p><b>Подключится к БД не удалось!</b>";
-    require_once('set_foot.php');
+    require_once('./set_foot.php');
     exit();
 }
 
