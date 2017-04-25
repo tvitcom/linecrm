@@ -1,0 +1,88 @@
+/*
+* This file is part of LineCRM - http://linecrm.org/
+*
+* LineCRM is free software: you can redistribute it and/or modify
+* it under the terms of the Attribution-ShareAlike 3.0 Unported 
+* (CC BY-SA 3.0) as published by Creative Commons nonprofit organization.
+*
+* LineCRM is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* Creative Commons legal text for more details.
+*
+* You should have received a copy of the Attribution-ShareAlike 3.0 Unported legal text
+* along with LineCRM code. If not, see <http://creativecommons.org/licenses/by-sa/3.0/legalcode/>.
+*/
+
+/**
+* The administration and management interface for the cache setup and configuration.
+*
+* This file is part of LineCRM source code.
+*
+* @package    main
+* @category   CRM
+* @copyright  2012 tvitcom
+* @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+*/
+
+hr { 
+size: 1px noshade;
+width: 100%;
+color: #FF0000;
+}
+a {
+font-size: 16px;
+font-family: sans-serif;
+}
+b {
+font-size: 22px;
+font-family: sans-serif;
+font-weight: bold;
+}
+body {
+margin: 0px;
+}
+.center {
+font-size: 14px;
+font-family: sans-serif;
+font-weight: bold;
+}
+a, p, td, tr, footer {
+font-size: 12px;
+font-family: sans-serif;
+}
+a {
+margin: 5px;
+margin-top: 10px;
+}
+table,h3,h4,b, footer {
+margin: 10px;
+}
+table {
+/*width: 97%;*/
+border: 1px;
+background:#EDFADF;
+}
+p {
+text-indent: 10px;
+}
+h4 {
+font-size: 16px;
+font-family: sans-serif;
+font-weight: bold;
+}
+label {
+border: 1px solid;
+border-color: #FFA500;
+font-size: 20px;
+font-family: sans-serif;
+}
+input:checked+span {
+background-color: #5CD155;
+}
+tr, td {
+vertical-align: top;
+}
+th {
+text-align: left;
+}
