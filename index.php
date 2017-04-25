@@ -23,6 +23,12 @@
 * @copyright  2012 tvitcom
 * @license    http://creativecommons.org/licenses/by-sa/3.0/legalcode/ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 */
+
+    ## Journal guests in database:
+    $app_id = 1;
+    require(__DIR__ . '/../../components/Mysql.php');
+    require(__DIR__ . '/../../components/journaling.php');
+    
 include('./set_head.php');
 //header('Location:reconstruct.php');
 ?>
@@ -35,6 +41,12 @@ include('./set_head.php');
 <tr><td>Пароль</td><td>:</td><td><input type="password" name="pass" size="20"></td></tr>
 <tr><td></td><td></td><td><input type="submit" value="ВОЙТИ" autofocus></td></tr>
 </table>
+    <pre>
+    Тестовый доступ:
+    логин : adm
+    пароль: linecrm
+    
+    </pre>
 </form>
 
 <p>Если вы хотите зарегистрироватся то нажмите <a href="./registration.php">тут</a></p>
